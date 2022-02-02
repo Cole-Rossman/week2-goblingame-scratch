@@ -11,4 +11,14 @@ export function renderOrc(orcData) {
     hpEl.textContent = orcData.hp < 0 ? 0 : orcData.hp;
 
     emojiEl.id = `orc-face-${orcData.id}`;
-    
+    emojiEl.textContent = orcData.hp > 0 ? '👹' : '💀';
+
+    if (orcData.hp < 0) {
+        orcEl.classList.add('dead');
+    }
+
+    orcEl.append(nameEl, emojiEl, hpEl);
+
+    return orcEl;
+
+}
