@@ -31,10 +31,67 @@ orcForm.addEventListener('submit', (e) => {
         name: orcName,
         hp: Math.ceil(Math.random() * 5),
     };
+  // add the created object into orcs array in state
+    orcs.push(newOrc);
 
+  //  CALL displayOrcs after you create the function
 
+}); 
+  // make display goblins function 
+function displayOrcs() {
+    orcInfo.textContent = '';
 
-});
+  // loop through the orcs
+    for (let orc of orcs) {
+  // render new orc dom element for each item
+        const orcEl = renderOrc(orc);
+  // append element above to html, make each orc clickable using dynamic event listener, need a NEW eventlistener for every orc
+        orcEl.addEventListener('click', () => {
+ // call orcClickHandler function after created
+            orcClickHandler();
+        });
+
+        orcInfo.append(orcEl);
+    }
+}
+// call displayOrcs function
+
+function orcClickHandler(orcData) {
+    if (orcData.hp <= 0) return;
+    if (Math.random() < 1) {
+        alert(`You injured ${orcData.name}!!!`);
+        orcData.hp--;
+    } else {
+        alert('You missed.');
+    }
+    if (Math.random() < 1) {
+        playerHP--;
+        alert('You got injured!!!');
+    } else {
+        alert(`${orcData.name} missed.`);
+    }
+
+    heroHP.textContent = playerHP;
+    const orcHPEl = document.getElementById(`orc-hp-${orcData.id}`);
+    orcHPEl.textContent = orcData.hp;
+
+    const emoji = document.getElementById(`orc-face-${orcData.id}`);
+    emoji.textContent = orcData.hp > 0 ? '👹' : '💀';
+
+    if (orcData.hp === 0) {
+        defeatedOrcCount++;
+        defeatedNumber.textContent = defeatedOrcCount;
+    }
+
+    if (playerHP === 0) {
+        heroImage.classList.add('game-over');
+        alert('You have been defeated, GAME OVER.');
+    }
+
+    const allOrcsDefeated = orcs.every((orc) => orc.hp === 0);
+    if (allOrcsDefeated) alert('You are the champion!');
+
+}
   // get user input
   // use user input to update state 
   // update DOM to reflect the new state
