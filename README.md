@@ -1,3 +1,5 @@
+demo link: https://github.com/alchemy-2022-jan-demos/goblin-fighter/blob/demo/app.js
+
 start with html - within body and main, create divs with classes for each piece of information
 place divs within the divs so that information can be rendered to that area with space
 

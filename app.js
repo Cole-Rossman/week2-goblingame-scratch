@@ -18,6 +18,23 @@ let orcs = [
 let currentId = 4;
 
 // set event listeners 
+orcForm.addEventListener('submit', (e) => {
+  // prevent 1996 default behavior
+    e.preventDefault();
+  // name placed and submitted in form
+    const data = new FormData(orcForm);
+    const orcName = data.get('orc-name');
+
+  // create new object with that user input
+    const newOrc = {
+        id: currentId++,
+        name: orcName,
+        hp: Math.ceil(Math.random() * 5),
+    };
+
+
+
+});
   // get user input
   // use user input to update state 
   // update DOM to reflect the new state
