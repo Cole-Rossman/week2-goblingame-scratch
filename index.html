@@ -19,8 +19,8 @@
         </div>
     </header>
     <main>
-        <div class="hero-stats">
-            <div class="defeated-orc"></div>
+        <section class="hero-stats">
+            <div class="defeated-orc">
                 <p>Your Hero has defeated <span id="defeated-number">0</span> orcs</p>
                 <div class="defeated-list"></div>
             </div>
@@ -31,16 +31,18 @@
                 </p>
                 <img id="hero-image" src="./assets/hero.png"/>
             </div>
-        </div>
-        <div class="orc-stats">
+        </section>
+        <section class="orc-stats">
             <div>
                 <form>
                     <input name="orc-name" />
                     <button>Challenge Orc</button>
                 </form>
-                <div class="orcs"></div>
+                <div class="orcs">
+                    <div class="orc"></div>
+                </div>
             </div>
-        </div>
+        </section>
     </main>
     <footer>
         <div class="copy gutter-right">&copy; 2021 Alchemy Code Lab</div>

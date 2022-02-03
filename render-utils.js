@@ -8,7 +8,7 @@ export function renderOrc(orcData) {
 
     nameEl.textContent = orcData.name;
     hpEl.id = `orc-hp-${orcData.id}`;
-    hpEl.textContent = orcData.hp < 0 ? 0 : orcData.hp;
+    hpEl.textContent = orcData.hp < 0 ? 'HP: 0' : `HP: ${orcData.hp}`;
 
     emojiEl.id = `orc-face-${orcData.id}`;
     emojiEl.textContent = orcData.hp > 0 ? '👹' : '💀';
