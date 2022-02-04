@@ -1,1 +1,12 @@
-/* add home page styles here */
+.game-over {
+    transform: rotate(90deg);
+}
+
+#hero-image {
+    width: 500px;
+    height: 500px;
+}
+
+.hero-stats {
+    padding-left: 30px;
+}

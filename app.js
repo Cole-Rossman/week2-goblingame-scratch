@@ -61,7 +61,7 @@ function orcClickHandler(orcData) {
     if (orcData.hp <= 0) return;
     const math = Math.random() * 2;
     if (math < 1) {
-        console.log('first test', math);
+        // console.log('first test', math);
         alert(`You injured ${orcData.name}!!!`);
         orcData.hp--;
     } else {
@@ -69,7 +69,7 @@ function orcClickHandler(orcData) {
     } 
     const math2 = Math.random() * 3;
     if (math2 < 2) {
-        console.log('second test', math2);
+        // console.log('second test', math2);
         playerHP--;
         alert('You got injured!!!');
     } else {
