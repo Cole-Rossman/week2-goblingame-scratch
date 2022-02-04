@@ -13,12 +13,21 @@
 </head>
 
 <body>
-    <header>
-        <div class="gutter-right logo">
-            <img src="./assets/big-logo.png" />
-        </div>
-    </header>
     <main>
+        <section class="orc-stats">
+            <div>
+                <div class="opponent-name">
+                <h3>Opponent Name:</h3>
+                <form id="form">
+                    <input name="orc-name" />
+                    <button>Challenge Orc</button>
+                </form>
+                </div>
+                <div class="orcs">
+                    <div id="orc"></div>
+                </div>
+            </div>
+        </section>
         <section class="hero-stats">
             <div class="defeated-orc">
                 <p>Your Hero has defeated <span id="defeated-number">0</span> orcs</p>
@@ -32,22 +41,7 @@
                 <img id="hero-image" src="./assets/hero.png"/>
             </div>
         </section>
-        <section class="orc-stats">
-            <div>
-                <form id="form">
-                    <input name="orc-name" />
-                    <button>Challenge Orc</button>
-                </form>
-                <div class="orcs">
-                    <div id="orc"></div>
-                </div>
-            </div>
-        </section>
     </main>
-    <footer>
-        <div class="copy gutter-right">&copy; 2021 Alchemy Code Lab</div>
-    </footer>
-
     <script type="module" src="./app.js"></script>
 </body>
 

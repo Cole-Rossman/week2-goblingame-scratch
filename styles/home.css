@@ -9,4 +9,12 @@
 
 .hero-stats {
     padding-left: 30px;
+    align-items: flex-start;
+    background-color: transparent;
 }
+
+.orc-stats {
+    padding: 90px;
+    background-color: transparent;
+}
+
