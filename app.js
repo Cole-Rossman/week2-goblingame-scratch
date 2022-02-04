@@ -9,11 +9,11 @@ const orcInfo = document.getElementById('orc');
 
 // let state
 let defeatedOrcCount = 0;
-let playerHP = 1;
+let playerHP = 10;
 let orcs = [
-    { id: 1, name: 'Sheldon', hp: 1 },
-    { id: 2, name: 'Cletus', hp: 1 },
-    { id: 3, name: 'Arthur', hp: 1 },
+    { id: 1, name: 'Sheldon', hp: 7 },
+    { id: 2, name: 'Cletus', hp: 4 },
+    { id: 3, name: 'Arthur', hp: 9 },
 ];
 let currentId = 4;
 
@@ -29,15 +29,15 @@ orcForm.addEventListener('submit', (e) => {
     const newOrc = {
         id: currentId++,
         name: orcName,
-        hp: Math.ceil(Math.random() * 5),
+        hp: Math.ceil(Math.random() * 10),
     };
   // add the created object into orcs array in state
     orcs.push(newOrc);
 
   //  CALL displayOrcs after you create the function
-
+    displayOrcs();
 }); 
-  // make display goblins function 
+  // make display orcs function 
 function displayOrcs() {
     orcInfo.textContent = '';
 
@@ -46,25 +46,30 @@ function displayOrcs() {
   // render new orc dom element for each item
         const orcEl = renderOrc(orc);
   // append element above to html, make each orc clickable using dynamic event listener, need a NEW eventlistener for every orc
-        orcEl.addEventListener('click', () => {
+        orcEl.addEventListener('click', () =>
  // call orcClickHandler function after created
-            orcClickHandler();
-        });
+            orcClickHandler(orc)
+        );
 
         orcInfo.append(orcEl);
     }
 }
 // call displayOrcs function
+displayOrcs();
 
 function orcClickHandler(orcData) {
     if (orcData.hp <= 0) return;
-    if (Math.random() < 1) {
+    const math = Math.random() * 2;
+    if (math < 1) {
+        console.log('first test', math);
         alert(`You injured ${orcData.name}!!!`);
         orcData.hp--;
     } else {
         alert('You missed.');
-    }
-    if (Math.random() < 1) {
+    } 
+    const math2 = Math.random() * 3;
+    if (math2 < 2) {
+        console.log('second test', math2);
         playerHP--;
         alert('You got injured!!!');
     } else {
