@@ -9,22 +9,23 @@
     <link rel="stylesheet" href="./styles/reset.css">
     <link rel="stylesheet" href="./styles/style.css">
     <link rel="stylesheet" href="./styles/home.css">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Quintessential&display=swap');
+    </style>
     <title>Orc Slayer</title>
 </head>
 
 <body>
     <main>
         <section class="orc-stats">
-            <div>
                 <h3 class="name-h3"><bold>Opponent Name:</bold></h3>
                 <form id="form">
-                    <input name="orc-name" />
+                    <input class="name-input" name="orc-name" />
                     <button>Challenge Orc</button>
                 </form>
                 <div class="orcs">
                     <div id="orc"></div>
                 </div>
-            </div>
         </section>
         <section class="hero-stats">
             <div class="defeated-orc">

@@ -5,7 +5,7 @@ const defeatedNumber = document.getElementById('defeated-number');
 const heroHP = document.getElementById('hero-hp');
 const heroImage = document.getElementById('hero-image');
 const orcForm = document.getElementById('form');
-const orcInfo = document.getElementById('orc');
+const orcInfo = document.querySelector('.orcs');
 
 // let state
 let defeatedOrcCount = 0;
@@ -13,7 +13,7 @@ let playerHP = 10;
 let orcs = [
     { id: 1, name: 'Sheldon', hp: 7 },
     { id: 2, name: 'Cletus', hp: 4 },
-    { id: 3, name: 'Arthur', hp: 9 },
+    { id: 3, name: 'Arthur', hp: 5 },
 ];
 let currentId = 4;
 
