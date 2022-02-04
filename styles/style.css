@@ -77,15 +77,6 @@ header img {
 
 p {
     margin: var(--gutter);
-}
-  
-footer {
-    position: fixed;
-    width: 100%;
-    bottom: 0;
-    height: var(--footer-height);
-    display: flex;
-    justify-content: flex-end;
-    background-color: var(--color3);
-    box-shadow: var(--shadow);
+    font-weight: bolder;
+    font-size: larger;
 }

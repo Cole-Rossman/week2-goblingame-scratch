@@ -11,6 +11,8 @@
     padding-left: 30px;
     align-items: flex-start;
     background-color: transparent;
+    border: 10px burlywood solid;
+    border-radius: 3%;
 }
 
 .orc-stats {
@@ -18,3 +20,37 @@
     background-color: transparent;
 }
 
+.name-h3 {
+    background-color: crimson;
+    width: 120px;
+    border: 3px black solid;
+}
+
+#form {
+    background-color: burlywood;
+    height: 35px;
+    border: 3px black solid;
+    border-radius: 8%;
+}
+
+.orcs {
+    background-color: burlywood;
+    border: 3px black solid;
+    border-radius: 3%;
+}
+
+.defeated-orc {
+   background-color: burlywood;
+   border: 4px black solid;
+   border-radius: 4%; 
+   height: auto;
+   width: auto;
+}
+
+.hp-p {
+    background-color: crimson;
+    border: 3px black solid;
+    border-radius: 4%;
+    height: auto;
+    width: 20%;
+}
