@@ -9,7 +9,7 @@ const orcInfo = document.querySelector('.orcs');
 
 // let state
 let defeatedOrcCount = 0;
-let playerHP = 10;
+let playerHP = 1;
 let orcs = [
     { id: 1, name: 'Sheldon', hp: 7 },
     { id: 2, name: 'Cletus', hp: 4 },
@@ -21,6 +21,8 @@ let currentId = 4;
 orcForm.addEventListener('submit', (e) => {
   // prevent 1996 default behavior
     e.preventDefault();
+
+    if (playerHP <= 0) return;
   // name placed and submitted in form
     const data = new FormData(orcForm);
     const orcName = data.get('orc-name');
@@ -59,6 +61,7 @@ displayOrcs();
 
 function orcClickHandler(orcData) {
     if (orcData.hp <= 0) return;
+    if (playerHP <= 0) return;
     const math = Math.random() * 2;
     if (math < 1) {
         // console.log('first test', math);
