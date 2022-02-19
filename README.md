@@ -1,3 +1,38 @@
+demo link: https://github.com/alchemy-2022-jan-demos/goblin-fighter/blob/demo/app.js
+
+start with html - within body and main, create divs with classes for each piece of information
+place divs within the divs so that information can be rendered to that area with space
+
+within render-utils.js create and export function renderGoblin(goblinData). within the function
+start by creating new elements for goblin, emoji, name and hp.
+add classlist 
+
+set created elements equal to corresponding information
+use ternary to set the face
+if statement to set if goblin lives/dies, a different emoji will show
+
+in app.js import rendergoblin 
+grab dom elements
+let state: goblins, player hp, defeated goblins and currentId (for unique id assigned)
+
+add event listeners for new goblin form, const for entering name and form, make new goblin object w
+with that user imput
+add that object to the array of goblins in the state
+
+create function display goblins: update a list, clear out list dom, loop through goblins
+render new goblin dom element for each item, append that element to HTMl
+
+add dynamic eventlistener, make new eventlistener for every goblim
+
+
+
+
+
+
+
+
+
+
 ## The Golden Rule: 
 
 🦸 🦸‍♂️ `Stop starting and start finishing.` 🏁
